@@ -1,9 +1,19 @@
 #include<stdio.h>
-
-int i,j,temp;
+int array[20];
+int i,j,temp,n;
+int read()
+{
+printf("enter the no of terms");
+scanf("%d",&n);
+printf("enter the terms");
+for(i=0;i<n;i++)
+{
+scanf("%d",&array[i]);
+}
+}
 int sort(int *array)
 {
-for(i=0;i<7;i++)
+for(i=0;i<n;i++)
 {
       temp=array[i];
       j=i-1;
@@ -19,10 +29,10 @@ return 0;
 }
 int main()
 {
-int array[7]={4,23,43,38,15,10,30};
+read();
 sort(array);
 
-for(i=0;i<7;i++)
+for(i=0;i<n;i++)
 {
 printf("%d\t",array[i]);
 }
