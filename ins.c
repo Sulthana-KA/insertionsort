@@ -1,8 +1,8 @@
 #include<stdio.h>
-int array[20];
-int i,j,temp,n;
-int read()
+int i,j,temp;
+int read(int *array)
 {
+int n;
 printf("enter the no of terms");
 scanf("%d",&n);
 printf("enter the terms");
@@ -10,8 +10,9 @@ for(i=0;i<n;i++)
 {
 scanf("%d",&array[i]);
 }
+return n;
 }
-int sort(int *array)
+int sort(int *array,int n)
 {
 for(i=0;i<n;i++)
 {
@@ -29,10 +30,11 @@ return 0;
 }
 int main()
 {
-read();
-sort(array);
+int array[100];
+int size=read(array);
+sort(array,size);
 
-for(i=0;i<n;i++)
+for(i=0;i<size;i++)
 {
 printf("%d\t",array[i]);
 }
