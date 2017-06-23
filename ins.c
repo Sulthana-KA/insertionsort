@@ -1,8 +1,8 @@
 #include<stdio.h>
-int main()
-{
-int array[7]={4,23,43,38,15,10,30};
+
 int i,j,temp;
+int sort(int *array)
+{
 for(i=0;i<7;i++)
 {
       temp=array[i];
@@ -14,6 +14,13 @@ for(i=0;i<7;i++)
         }
       array[j+1]=temp;
 }
+return 0;
+
+}
+int main()
+{
+int array[7]={4,23,43,38,15,10,30};
+sort(array);
 
 for(i=0;i<7;i++)
 {
